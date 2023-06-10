@@ -1,0 +1,8 @@
+services:
+  make:
+    image: genjiohara/make
+    container_name: chess-make
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    tty: true
