@@ -214,15 +214,33 @@ void PLAYERvsPLAYER(Thinker &thinker)
     }
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
     Thinker thinker;
     Marker marker;
-    // PLAYERvsCPU(thinker, marker);
 
-    // PLAYERvsPLAYER(thinker, marker);
-    CPUvsCPU(thinker);
-
+    std::string opt;
+    switch (argc)
+    {
+    case 1:
+        PLAYERvsCPU(thinker);
+        break;
+    case 2:
+        opt = argv[1];
+        if (opt == "--cpu-cpu")
+        {
+            CPUvsCPU(thinker);
+            break;
+        }
+        else if (opt == "--player-player")
+        {
+            PLAYERvsPLAYER(thinker);
+            break;
+        }
+    default:
+        std::cout << "The arguments are invalid." << std::endl;
+        return 1;
+    }
     // output_csv_for_ML();
 
     return 0;
