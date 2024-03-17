@@ -6,15 +6,15 @@ LIBDIR 	=	GenjiChess
 OBJDIR	=	$(LIBDIR)/obj
 
 # main files
-SRCS	= 	*.cpp
+SRCS	= 	*.cc
 DEPEND	=	dependencies.mk
 
 # library files
-LIBSRCS	=	$(LIBDIR)/*.cpp
-LIBHEAD	=	$(LIBDIR)/*.hpp
+LIBSRCS	=	$(LIBDIR)/*.cc
+LIBHEAD	=	$(LIBDIR)/*.h
 LIBOBJS	= 	$(OBJDIR)/*.o
 LIBTRG	=	$(OBJDIR)/lib.a
-LIBPCH 	= 	$(LIBDIR)/pch.hpp
+LIBPCH 	= 	$(LIBDIR)/pch.h
 LIBGCH  =	$(LIBPCH).gch
 
 # commands
