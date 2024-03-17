@@ -2,7 +2,7 @@
 TARGET 	= chess
 
 # directories
-LIBDIR 	= GenjiChess
+LIBDIR 	= lib
 OBJDIR  = $(LIBDIR)/obj
 
 # main files
