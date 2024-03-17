@@ -1,15 +1,7 @@
 services:
-  make:
-    image: genjiohara/make
-    container_name: chess-make
+  gcc:
+    image: genjiohara/gcc
+    container_name: chess
     volumes:
-      - ./:/workspace
-    working_dir: /workspace
-    tty: true
-  doxygen:
-    image: greenbone/doxygen
-    container_name: chess-doxygen
-    volumes:
-      - ./:/workspace
-    working_dir: /workspace
+      - ./:/root/workspace
     tty: true

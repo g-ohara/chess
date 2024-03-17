@@ -1,2 +1,4 @@
 html/
 obj/
+*.o
+*.h.gch
